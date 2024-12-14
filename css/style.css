@@ -32,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -472,8 +472,9 @@ mark,
   content: "\2014\00A0";
 }
 
+/* 프로필 사진크기 조정 */
 .img-fluid {
-  max-width: 100%;
+  max-width: 230px;
   height: auto;
 }
 
@@ -9505,6 +9506,13 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+/* 프로필 사진 가운데 정렬 */
+.wrapper .sidebar-text {
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
 @media (min-width: 992px) {
   .wrapper .sidebar {
     margin: 0;
@@ -9528,6 +9536,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /******** Custom CSS *********/
+
 h1, h2, h3 {
   font-weight: 700 !important;
 }

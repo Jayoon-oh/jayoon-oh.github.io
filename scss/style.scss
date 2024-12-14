@@ -97,13 +97,13 @@ $enable-shadows: false;
         scrollbar-color: gray;
         z-index: 9;
     }
-
+	
     .wrapper .sidebar:hover {
         margin-left: 0px;
     }
 
     .wrapper .sidebar-text {
-        display: none;
+        display: flx;
     }
 
     .wrapper .sidebar-icon {
