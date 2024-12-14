@@ -474,8 +474,10 @@ mark,
 
 /* 프로필 사진크기 조정 */
 .img-fluid {
-  max-width: 230px;
+  max-width: 200px;
   height: auto;
+  border-radius: 50%; /* 동그랗게 만들기 */
+  object-fit: cover; /* 이미지 비율 유지*/
 }
 
 .img-thumbnail {
