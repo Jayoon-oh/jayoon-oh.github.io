@@ -52,6 +52,10 @@
 		.hidden {
             display: none; /* 숨기기 */
         }
+        
+        .sidebar-links {
+        text-align: left; /* 텍스트를 왼쪽으로 정렬 */
+		 }
 	</style>
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
         <div class="wrapper">
@@ -61,13 +65,18 @@
                     <h3 class="mt-2">오자윤</h3>
                     &nbsp;
                     Backend Developer
+                   <!-- Category -->
+				    <div class="sidebar-links mt-4">
+				        <ul class="list-unstyled">
+				            <li class="mb-3"><a href="#About" class="text-decoration-none"><i class="fas fa-address-card"></i> About</a></li>
+				            <li class="mb-3"><a href="#Education" class="text-decoration-none"><i class="fas fa-chalkboard-teacher"></i> Education</a></li>
+				            <li class="mb-3"><a href="#Final_Project" class="text-decoration-none"><i class="fas fa-laptop"></i> Final Project</a></li>
+				            <li class="mb-3"><a href="#Semi_Project" class="text-decoration-none"><i class="fas fa-laptop"></i> Semi Project</a></li>
+				        </ul>
+				    </div>
                     <div class="d-flex justify-content-center mt-auto mb-3">
-                        <a class="mx-2" href="#"><i class="fab fa-github"></i></a>
+                        <a class="mx-2" href="https://github.com/Jayoon-oh" target="_blank"><i class="fab fa-github"></i></a>
                         <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="d-flex align-items-end justify-content-between">
-                        <a href="" class="btn btn-block border-right">Download CV</a>
-                        <a href="#contact" class="btn btn-block btn-scroll">Contact Me</a>
                     </div>
                 </div>
                 <div class="sidebar-icon d-flex flex-column h-100 justify-content-center text-right">
@@ -76,7 +85,7 @@
             </div>
             <div class="content" style="width:885px;">
                 <!-- About Start -->
-                <div class="container bg-white py-5" style="margin:0; padding:0;">
+                <div id="About" class="container bg-white py-5">
                     <div class="row px-3">
                         <div class="col-12">
                             <h5 class="title position-relative pb-2 mb-4">About me</h5>
@@ -148,7 +157,7 @@
 				        <!-- Certification Section -->
 				
 				        <!-- Education Section -->
-				        <div>
+				        <div id="Education">
 				            <h5 class="title position-relative pb-2 mb-4">Education</h5>
 				            <div class="border-left border-success pt-2 pl-4 ml-2">
 				                <div class="position-relative mb-4">
@@ -231,9 +240,9 @@
 				
                 <!-- Portfolio Start -->
                 <div class="container bg-white pt-5 pb-3">
-                    <div class="row px-3">
+                    <div id="Final_Project" class="row px-3">
                         <div class="col-12">
-                            <h5 class="title position-relative pb-2 mb-4">Project</h5>
+                            <h5 class="title position-relative pb-2 mb-4">Final Project</h5>
                         </div>
                         <div class="col-12">
                             <div class="mySlides">
@@ -247,9 +256,9 @@
 						    </button>
 							<!-- 포폴 설명 -->
 						    <div id="infoDiv1" class="hidden mt-3">
-						        <h5>추가 정보</h5>
-						        <p>여기에 추가 정보를 입력합니다.</p>
-						        
+					    		<div style="text-align: end;">
+									<a href="https://github.com/Jayoon-oh/PetTopia_FinalProject" target="_blank" class="btn btn-primary">Github 바로가기</a>
+								</div>
 						        <div>
 									<table class="table">
 										<tbody><tr>
@@ -258,19 +267,16 @@
 										</tr>
 										<tr>
 											<td>
-												제목 : academy 그룹웨어 <br>
-												기간 : 2024-01-02 ~ 2024-02-11<br>
-												인원 : 총 5명<br>
-												인사팀 - id: 92, pw:1234<br>
-												행정팀 - id: 99, pw:1234<br>
-												운영팀 - id: 101, pw:1234
+												• 펫동반 호텔 그룹웨어 <br>
+											<small>[2024-01-02 ~ 2024-02-11]</small><br><br>
+												• 팀원 : 5명<br>
 											</td>
 											<td>
 												- 로그인 : DB검증<br>
 												- 메인 : 미결재리스트, 공지사항, 메모 조회/작성/수정/삭제, 출퇴근버튼<br>
 												- 마이페이지 : 개인정보 변경/일정 조회<br>
 												- 주소록 : 사원 조회/추가/수정/삭제/검색<br>
-												- 채팅 : 사원 리스트 조회/검색, 선택한 사원과 1:1 채팅<br>
+												- 쪽지 : 사원 리스트 조회/검색, 선택한 사원과 1:1 채팅<br>
 												- 공지사항 : 공지사항 글 조회/작성/수정/삭제/검색<br>
 												- 결재관리 : 결재 조회/작성/수정/삭제(대기, 승인, 반려)<br>
 												- 시설관리 : 회의실 예약 조회/등록/수정/삭제, 회의실 조회/등록/수정/삭제, 강의실 조회/등록/수정/삭제<br>
@@ -283,7 +289,7 @@
 										</tr>
 										<tr>
 											<td colspan="2">
-												미결재 리스트, 강의실관리, 회의실예약<br><br>
+												공지사항, 쪽지, 근태관리, 휴가관리<br><br>
 												<ul>
 													<li><span class="b-title">미결재 리스트</span>
 														<ul>
@@ -448,12 +454,13 @@
                     </div>
                     
                     <!-- semi project -->
-                    <div class="row px-3">
+                    <div id="Semi_Project" class="row px-3" style="padding-top: 100px">
                         <div class="col-12">
-                            	<div class="mySlides2">
-                            		<a href="" target="_blank">
-					              	<img src="img/mallMain.png" alt="semi1" style="width: 800px; height: 700px;"></a>
-				             	 </div>
+                             <h5 class="title position-relative pb-2 mb-4">Semi Project</h5>
+                           	<div class="mySlides2">
+                           		<a href="" target="_blank">
+				              	<img src="img/mallMain.png" alt="semi1" style="width: 800px; height: 700px;"></a>
+			             	 </div>
 				            
 				            <br> 	 
 				            <button id="toggleButton2" class="btn btn-primary mt-2">
@@ -461,25 +468,9 @@
 						    </button>
 							<!-- 포폴 설명 -->
 						    <div id="infoDiv2" class="hidden mt-3">
-								<div class="flex">
-									<div>
-										<span class="meta">파이널 팀 프로젝트</span>
-										<h3 style="font-size: 35px; font-family:'Pretendard-SemiBold';word-break:keep-all;">
-											academy 그룹웨어<br>
-											<span>2023-12-04 ~ 2024-01-19</span>
-										</h3>
-									</div>
 									<div style="text-align: end;">
-										<a href="http://43.203.2.245/academy/login" target="_blank" class="btn btn-primary">academy 바로가기</a>
-										<a href="images/academy_ERD.png" target="_blank" class="btn btn-primary">ERD 바로가기</a>
-										<a href="https://github.com/gd86-academy/academy" target="_blank" class="btn btn-primary">Github 바로가기</a>
-										<a href="https://www.figma.com/proto/Vc4psYCSXfQMj57Ji53wMM/figma?node-id=3498-21118&amp;p=f&amp;t=wKnvpFiPj6dzkmVN-0&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=3498%3A21118" target="_blank" class="btn btn-primary">
-											Figma 바로가기
-										</a>
-										<a href="https://docs.google.com/spreadsheets/d/1TFGHXgTHKRkT5B8ufzv-7dTCbjtDNTQ7VarB5krVfHc/edit?gid=414122424#gid=414122424" target="_blank" class="btn btn-primary">요구사항 정의서 바로가기</a>
-										<a href="images/final.pptx" target="_blank" class="btn btn-primary">PPT 다운로드</a>
+										<a href="https://github.com/Jayoon-oh/mall_SemiProject" target="_blank" class="btn btn-primary">Github 바로가기</a>
 									</div>
-								</div>
 
 								<div>
 									<table class="table">
@@ -489,12 +480,9 @@
 										</tr>
 										<tr>
 											<td>
-												제목 : academy 그룹웨어 <br>
-												기간 : 2024-01-02 ~ 2024-02-11<br>
-												인원 : 총 5명<br>
-												인사팀 - id: 92, pw:1234<br>
-												행정팀 - id: 99, pw:1234<br>
-												운영팀 - id: 101, pw:1234
+												• 강아지 용품 쇼핑몰<br>
+											<small>[2024-11-25 ~ 2024-12-29]</small><br><br>
+												• 팀원 : 3명<br>
 											</td>
 											<td>
 												- 로그인 : DB검증<br>
@@ -694,12 +682,12 @@
                 <!-- Footer Start -->
                 <div class="container-fluid bg-white pt-5 px-0">
                     <div class="container bg-white text-dark text-center py-5">
-                        <div class="d-flex justify-content-center mb-4">
+<!--                         <div class="d-flex justify-content-center mb-4">
                             <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
+                        </div> -->
                         <p class="m-0">&copy; All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
                     </div>
                 </div>
@@ -785,7 +773,7 @@
         });
 
         </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // 첫 번째 포폴설명 숨기기
         $(document).ready(function() {
@@ -813,5 +801,15 @@
             });
         });
     </script>
+    <script>
+    //카테고리 스크롤 이동
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 400);
+    });
+</script>
     </body>
 </html>
